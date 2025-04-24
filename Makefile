@@ -4,4 +4,7 @@ install-disko:
 	@echo "Installing disko"
 	nix-shell -p disko --run "disko ${GEN}/disko.nix"
 
-.PHONY: install-disko
+test-fzf:
+	ls | fzf
+
+.PHONY: install-disko test-fzf
