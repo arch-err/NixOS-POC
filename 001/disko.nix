@@ -1,4 +1,3 @@
-{ pkgs ? import <nixpkgs> {} }:
 {
   disko.devices = {
     disk = {
@@ -28,6 +27,7 @@
                 settings = {
                   allowDiscards = true;
                   # keyFile = "/tmp/secret.key";
+                  fallbackToPassword = true;
                 };
                 additionalKeyFiles = [ "/tmp/additionalSecret.key" ];
                 content = {
