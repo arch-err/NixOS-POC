@@ -2,7 +2,6 @@
 GEN ?= $(error GEN (generation) is not defined. Please set it before running make.)""
 
 disko:
-	@echo "Disko"
-	disko ${GEN}/disko.nix
+	sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount ${GEN}/disko.nix
 
 .PHONY: disko
