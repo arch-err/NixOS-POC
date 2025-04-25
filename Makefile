@@ -4,4 +4,7 @@ GEN ?= $(error GEN (generation) is not defined. Please set it before running mak
 disko:
 	sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount ${GEN}/disko.nix
 
-.PHONY: disko
+nix-setup:
+
+
+.PHONY: disko nix-setup

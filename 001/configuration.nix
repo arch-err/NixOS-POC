@@ -10,8 +10,6 @@
       ./hardware-configuration.nix
     ];
 
-  # Use the GRUB 2 boot loader.
-
   # grub
   boot.loader.grub = {
     enable = true;
@@ -24,7 +22,7 @@
   # luks
   boot.initrd.luks.devices = {
     crypted = {
-      device = "/dev/disk/by-partlabel/disk-main-luks";
+      device = config.boot.initrd.luks.devices."crypted".device;
       preLVM = true;
     };
   };
