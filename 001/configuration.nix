@@ -13,19 +13,18 @@
   # grub
   boot.loader.grub = {
     enable = true;
-    version = 2;
     efiSupport = true;
     enableCryptodisk = true;
     device = "nodev";
   };
 
   # luks
-  boot.initrd.luks.devices = {
-    crypted = {
-      device = config.boot.initrd.luks.devices."crypted".device;
-      preLVM = true;
-    };
-  };
+  #boot.initrd.luks.devices = {
+  #  crypted = {
+  #    #device = config.boot.initrd.luks.devices."crypted".device;
+  #    #preLVM = true;
+  #  };
+  # };
 
   # networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
