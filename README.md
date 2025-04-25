@@ -19,6 +19,5 @@ This is a POC project for what will hopefully lead to the declarative setup of m
 git clone https://github.com/arch-err/NixOS-POC.git && cd NixOS-POC
 nix-shell -p gnumake
 git pull && make GEN=001 disko
-sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount 001/disko.nix
 
 ```
