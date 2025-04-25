@@ -18,6 +18,6 @@ This is a POC project for what will hopefully lead to the declarative setup of m
 ```bash
 git clone https://github.com/arch-err/NixOS-POC.git && cd NixOS-POC
 nix-shell -p disko gnumake
-make GEN=001 disko
+git pull && make GEN=001 disko
 
 ```

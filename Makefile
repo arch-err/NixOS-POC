@@ -2,6 +2,6 @@ GEN ?= $(error GEN (generation) is not defined. Please set it before running mak
 
 disko:
 	@echo "Disko"
-    disko ${GEN}/disko.nix
+	disko ${GEN}/disko.nix
 
 .PHONY: disko
