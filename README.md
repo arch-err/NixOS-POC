@@ -19,5 +19,5 @@ This is a POC project for what will hopefully lead to the declarative setup of m
 git clone https://github.com/arch-err/NixOS-POC.git && cd NixOS-POC
 nix-shell -p gnumake
 git pull && make GEN=001 disko
-
+git pull && make GEN=001 nix-setup
 ```
